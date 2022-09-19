@@ -145,33 +145,20 @@ img {
 .contact-nav a:focus {
     color: var(--main-color);
 }
-/* .wrapper-service {
-    position: absolute;
-    max-width: 1600px;
-    height: 600px;
-    margin: 0 auto;
-    background: rgba(47, 48, 58, 0.4);
-    z-index: 1;
-} */
+
 .service {
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
     
-    background-image: url(../images/main-bg.jpg);
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.service::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 600px;
-    position: absolute;
-    top: 81px;
-    background: rgba(47, 48, 58, 0.4);
-}
 
 
 .service .title {
@@ -234,8 +221,9 @@ img {
 
 .item-benefits {
     height: 120px;
-    padding-top: 25px;
-    padding: 25px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--light-bg);
     border-radius: 4px;
     margin-bottom: 30px;
@@ -294,28 +282,27 @@ img {
     gap: 10px;
 }
 
+.team-social li {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .team-social a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
+    fill: var(--icons-color);
     
 }
 
 .team-social a:hover, .team-social a:focus {
     background-color: var(--main-color);
-}
-
-
-.team-social .item {
-    width: 20px;
-    height: 20px;
-    fill: var(--icons-color);
-}
-
-.team-social .item:hover, .team-social .item:focus {
     fill: var(--page-white-color);
 }
 
@@ -371,18 +358,21 @@ img {
     border-radius: 4px;
 }
 
-.client-list .item {
+.client-list a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     fill: var(--icons-color);
 }
 
-.client-list .item:hover, .client-list .item:focus {
+.client-list a:hover, .client-list a:focus {
     fill: var(--main-color);
 }
 .client-list li:hover, .client-list li:focus {
     border: 1px solid var(--main-color);
 }
-
-
 
 .page-footer {
     padding-top: 60px;
@@ -393,6 +383,7 @@ img {
 .footer-wrapper {
     display: flex;
     gap: 70px;
+    align-items: baseline;
 }
 
 .page-footer .list {
@@ -439,9 +430,8 @@ img {
     color: var(--main-color);
 }
 
-.page-footer .title {
+.page-footer .social {
     margin-bottom: 20px;
-    margin-top: 12px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -456,33 +446,29 @@ img {
     gap: 10px;
 }
 
+.social-list li {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .social-list a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
     background: rgba(255, 255, 255, 0.1);
+    fill: var(--page-white-color);
 
 }
 
 .social-list a:hover, .social-list a:focus {
     background-color: var(--main-color);
 }
-
-.social-list .item {
-    width: 20px;
-    height: 20px;
-    fill: var(--icons-color);
-}
-
-.social-list .item:hover, .social-list .item:focus {
-    fill: var(--page-white-color);
-}
-
-
-
 
 .portfolio .title {
     display: none;
@@ -517,6 +503,7 @@ img {
 .btns .btn:hover, .btns .btn:focus {
     background: var(--main-color);
     color: var(--page-white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-items {
@@ -531,6 +518,7 @@ img {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;   
+    color: var(--page-color);
 } 
 
 .portfolio-items img {
@@ -549,4 +537,12 @@ img {
     font-size: 16px;
     line-height: 1.88;   
     color: var(--page-light-color);
+}
+
+.portfolio-link {
+    text-decoration: none;
+}
+
+.portfolio-items li:hover, .portfolio-items li:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
